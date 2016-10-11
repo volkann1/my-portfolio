@@ -1,17 +1,14 @@
 {
-  "name": "185078-mishka",
+  "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "description": "Личный проект «Мишка» от HTML Academy",
+  "description": "Личный проект «Мое портфолио»",
   "author": "Анна Волкова",
   "repository": {
     "type": "git",
-    "url": "git@github.com:htmlacademy-adaptive/185078-mishka.git"
+    "url": "git@github.com:volkann1/my-portfolio.git"
   },
-  "bugs": {
-    "url": "https://github.com/htmlacademy-adaptive/185078-mishka/issues"
-  },
-  "homepage": "https://github.com/htmlacademy-adaptive/185078-mishka",
+  "homepage": "https://github.com/volkann1/my-portfolio",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "0.0.7",
     "autoprefixer": "6.4.1",
