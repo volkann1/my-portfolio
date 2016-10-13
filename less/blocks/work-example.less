@@ -1,0 +1,65 @@
+.works__item {
+  &--mishka {}
+
+  &--technomart {}
+
+  &--sedona {}
+
+  &--borodinski {}
+
+  &----creative-studio {}
+
+  &--inceptinious {}
+
+  &--nerds {}
+
+  &--empty {
+    display: none;
+  }
+}
+
+.works__item {}
+
+.work-example {}
+
+.work-example__link {
+  position: relative;
+  display: block;
+  color: #fff;
+  text-decoration: inherit;
+  text-align: center;
+
+  img {
+    display: block;
+  }
+
+  &:hover {
+    .work-example__description {
+      display: block;
+    }
+  }
+}
+
+.work-example__description {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  background: rgba(2, 145, 140, 0.85);
+  height: 196px;
+  width: 266px;
+  @media @tablet-widths {
+    display: none;
+  }
+}
+
+.work-example__title {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.work-example__text {
+  font-size: 13px;
+  .line-height (21; 13);
+}

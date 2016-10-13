@@ -1,0 +1,97 @@
+.contacts {
+  .container;
+  margin-bottom: 30px;
+}
+
+.contacts__description {
+  color: @grey-53;
+  text-align: center;
+}
+
+.contacts__list {
+  .list-style-none;
+  @media @tablet-widths {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media @desktop-widths {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+.contacts__item {
+  padding-left: 135px;
+  position: relative;
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  @media @tablet-widths {
+    width: 50%;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 34px;
+  }
+
+  &--adress {
+    &::before {
+      width: 57px;
+      height: 80px;
+      background: url("../img/icon-locationPin.svg") 0 0 no-repeat;
+      background-size: 67px auto;
+    }
+  }
+
+  &--tel {
+    &::before {
+      width: 60px;
+      height: 60px;
+      background: url("../img/icon-tel.svg") 0 0 no-repeat;
+      background-size: 60px auto;
+    }
+  }
+
+  &--skype {
+    &::before {
+      width: 64px;
+      height: 67px;
+      background: url("../img/icon-skype.svg") 0 0 no-repeat;
+      background-size: 64px auto;
+    }
+  }
+
+  &--email {
+    &::before {
+      width: 61px;
+      height: 54px;
+      background: url("../img/icon-mail.svg") 0 0 no-repeat;
+      background-size: 61px auto;
+    }
+  }
+}
+
+.contacts__item-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: @grey-53;
+}
+
+.contacts__item-text {
+  color: @grey-53;
+}
+
+.contacts__link {
+  .not-link;
+  border-bottom: 1px dotted @blue;
+
+  &:hover {
+    color: @blue;
+  }
+}

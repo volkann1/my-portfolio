@@ -1,0 +1,41 @@
+.section-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: @blue;
+  text-align: center;
+  text-transform: uppercase;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: slideInLeft;
+  @media @tablet-widths {
+    font-size: 46px;
+  }
+
+  &:after {
+    content: "~~~~~~~~ :: ~~~~~~~~";
+    font-size: 16px;
+    display: block;
+    font-weight: 400;
+    margin: 0 auto;
+    width: 300px;
+    color: @grey-53;
+  }
+
+  &--hidden {
+    .visually-hidden;
+  }
+
+  &--services {
+    @media @desktop-widths {
+      text-align: left;
+    }
+
+    &::after {
+      @media @desktop-widths {
+        content: "~~~~~ :: ~~~~~";
+        text-align: left;
+        width: 974px;
+      }
+    }
+  }
+}

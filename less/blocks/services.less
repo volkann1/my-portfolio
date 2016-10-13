@@ -1,0 +1,124 @@
+.services {
+  background: #f0f0e8;
+  padding-bottom: 30px;
+  @media @tablet-widths {
+    padding-bottom: 0;
+  }
+  @media @desktop-widths {
+    background: #f0f0e8 url("../img/bg-services-desktop.jpg") ~"calc(50% + 345px)" 0 no-repeat;
+  }
+}
+
+.services__wrap {
+  .container;
+}
+
+.services__description {
+  text-align: center;
+  color: @grey-53;
+  @media @tablet-widths {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 50px;
+  }
+  @media @desktop-widths {
+    padding-right: 529px;
+    margin-bottom: 50px;
+    text-align: left;
+    padding-left: 0;
+  }
+}
+
+.services__list {
+  .list-style-none;
+  padding-top: 21px;
+  padding-bottom: 1px;
+  background: url("../img/bg-services-mobile.jpg") center 0 no-repeat;
+  @media @tablet-widths {
+    background-position: 0 0;
+    padding-left: 451px;
+    background-image: url("../img/bg-services-tablet.jpg");
+    padding-top: 50px;
+  }
+  @media @desktop-widths {
+    background: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 500px;
+    padding-top: 0;
+  }
+}
+
+.services__item {
+  padding-left: 37px;
+  padding-right: 37px;
+  animation-name: fadeInLeft;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  @media @tablet-widths {
+    padding-right: 0;
+  }
+  @media @desktop-widths {
+    padding-left: 0;
+    width: 50%;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+  }
+
+  &--clean-code {
+    &::before {
+      width: 39px;
+      height: 34px;
+      background: url("../img/icon-code.svg") 0 0 no-repeat;
+      background-size: 39px auto;
+    }
+  }
+
+  &--responsive {
+    &::before {
+      width: 59px;
+      height: 36px;
+      background: url("../img/icon-responsive2.svg") 0 -11px no-repeat;
+      background-size: 59px auto;
+    }
+  }
+
+  &--pixel-perfect {
+    &::before {
+      width: 39px;
+      height: 39px;
+      background: url("../img/icon-pixelPerfect.svg") 0 0 no-repeat;
+      background-size: 39px auto;
+    }
+  }
+
+  &--quality {
+    &::before {
+      width: 32px;
+      height: 40px;
+      background: url("../img/icon-perfect.svg") 0 0 no-repeat;
+      background-size: 32px auto;
+    }
+  }
+}
+
+.services__title {
+  .line-height (23; 16);
+  font-weight: 800;
+  color: @grey-53;
+  font-size: 16px;
+}
+
+.services__item-text {
+  .line-height (21; 11);
+  color: @blue;
+  font-size: 11px;
+  margin-bottom: 30px;
+  @media @tablet-widths {
+    color: @grey-53;
+  }
+}

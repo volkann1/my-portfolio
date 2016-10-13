@@ -1,0 +1,172 @@
+.main-menu {
+  position: relative;
+  @media @desktop-widths {
+    padding-left: 20px;
+    margin-left: auto;
+    padding-top: 24px;
+  }
+
+  &--closed {
+    .main-menu__toggle {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      font-size: 0;
+      position: absolute;
+      top: -64px;
+      right: 0;
+      cursor: pointer;
+      @media @desktop-widths {
+        display: none;
+      }
+
+      &:hover {
+        .main-menu__toggle-open {
+          fill: @yellow;
+        }
+      }
+    }
+
+    .main-menu__toggle-open {
+      fill: white;
+    }
+
+    .main-menu__toggle-close {
+      display: none;
+    }
+
+    .main-menu__list {
+      @media @mobile-tablet-widths-only {
+        display: none;
+      }
+      @media @desktop-widths {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &--opened {
+    .main-menu__toggle {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      font-size: 0;
+      position: absolute;
+      top: -61px;
+      right: 2px;
+      cursor: pointer;
+      @media @desktop-widths {
+        display: none;
+      }
+
+      &:hover {
+        .main-menu__toggle-close {
+          fill: @yellow;
+        }
+      }
+    }
+
+    .main-menu__toggle-close {
+      fill: white;
+    }
+
+    .main-menu__toggle-open {
+      display: none;
+    }
+
+    .main-menu__list {
+      position: absolute;
+      width: 320px;
+      background: @blue;
+      top: 0;
+      left: -10px;
+      @media @tablet-widths {
+        width: 768px;
+        left: -20px;
+      }
+    }
+  }
+
+  &--nojs {
+    .main-menu__list {
+      position: static;
+      width: 300px;
+    }
+
+    .main-menu__toggle {
+      display: none;
+    }
+  }
+}
+
+.main-menu__list {
+  .list-style-none;
+  padding-bottom: 20px;
+
+  li {
+    text-align: center;
+    @media @desktop-widths {
+      margin-right: 25px;
+    }
+  }
+}
+
+.main-menu__item {
+  color: #fff;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: 800;
+  line-height: 1.7;
+  display: block;
+  @media @tablet-widths {
+    font-size: 48px;
+  }
+  @media @desktop-widths {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  &:hover {
+    color: @yellow;
+
+    &::after {
+      color: @yellow;
+    }
+
+    .main-menu__icon {
+      fill: @yellow;
+    }
+  }
+
+  &:after {
+    content: "~~~~~~~~ :: ~~~~~~~~";
+    font-size: 16px;
+    display: block;
+    font-weight: 400;
+    margin: 0 auto;
+    width: 300px;
+    padding-left: 45px;
+    @media @desktop-widths {
+      display: none;
+    }
+  }
+}
+
+.main-menu__icon {
+  fill: #fff;
+  position: relative;
+  top: 12px;
+  left: -9px;
+  @media @desktop-widths {
+    display: none;
+  }
+}
+
+.main-menu__point:last-child {
+  .main-menu__item {
+    &::after {
+      display: none;
+    }
+  }
+}

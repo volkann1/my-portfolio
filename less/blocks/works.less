@@ -1,0 +1,43 @@
+.works {
+  width: 320px;
+  margin: 0 auto;
+  @media @tablet-widths {
+    width: 768px;
+  }
+  @media @desktop-widths {
+    width: 1150px;
+  }
+}
+
+.works__description {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: @grey-53;
+  margin-bottom: 50px;
+  @media @tablet-widths {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media @desktop-widths {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.works__list {
+  .list-style-none;
+  @media @tablet-widths {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.works__item {
+  &--techomart {
+    @media @desktop-widths {
+      order: -1;
+    }
+  }
+}

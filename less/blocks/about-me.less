@@ -1,0 +1,32 @@
+.about-me {
+  .container;
+}
+
+.about-me__description {
+  .line-height(30; 16);
+  color: @grey-53;
+  text-align: center;
+  @media @tablet-widths {
+    padding-left: 85px;
+    padding-right: 85px;
+  }
+  @media @desktop-widths {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.about-me__hidden-text {
+  display: none;
+  @media @tablet-widths {
+    display: inline;
+  }
+}
+
+.about-me__impotrant-text {
+  font-weight: 800;
+  @media @tablet-widths {
+    font-size: 23px;
+    .line-height(41;23);
+  }
+}

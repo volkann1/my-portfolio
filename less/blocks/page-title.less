@@ -1,0 +1,80 @@
+.page-title {
+  background: @blue url(../img/bg-my-photo-mobile.jpg) 0 0 no-repeat;
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  .container;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: zoomIn;
+  @media @tablet-widths {
+    background-image: url("../img/bg-my-photo-tablet.jpg");
+    padding-bottom: 5px;
+  }
+  @media @desktop-widths {
+    background-image: url("../img/bg-my-photo-desktop.jpg");
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.page-title__description {
+  font-size: 30px;
+  display: block;
+  padding-top: 278px;
+  line-height: 1;
+  margin-bottom: 46px;
+  @media @desktop-widths {
+    width: 100%;
+  }
+}
+
+.page-title__type {
+  font-size: 58px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  line-height: 1;
+  display: block;
+  margin-bottom: 27px;
+}
+
+.page-title__profession {
+  font-size: 24px;
+  font-weight: 800;
+  display: block;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  margin-bottom: 38px;
+  @media @tablet-widths {
+    font-size: 58px;
+    display: block;
+    letter-spacing: 20px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+}
+
+.page-title__name {
+  font-size: 30px;
+  display: block;
+  word-spacing: 13px;
+  @media @tablet-widths {
+    font-size: 48px;
+  }
+  @media @desktop-widths {
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 108px;
+    height: 25px;
+    background: url("../img/icon-page-title.png") 0 0 no-repeat;
+    margin: 62px auto 0;
+    padding-bottom: 42px;
+  }
+}
