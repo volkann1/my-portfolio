@@ -79,8 +79,34 @@ gulp.task("copyHtml", function() {
   .pipe(gulp.dest("build"));
 });
 
+gulp.task("copyJs", function() {
+  return gulp.src ([
+    "js/*.js"
+  ], {
+    base: "."
+  })
+  .pipe(gulp.dest("build"));
+});
+
 gulp.task ("clean", function() {
   return del("build");
+});
+
+gulp.task("minJs", function() {
+  gulp.src("js/**.js")
+  .pipe(uglify())
+   .pipe(rename({
+    suffix: ".min",
+  }))
+  .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("copyMinJs", function(fn) {
+  run(
+    "copyJs",
+    "minJs",
+    fn
+  );
 });
 
 gulp.task("serve", function() {
@@ -94,16 +120,10 @@ gulp.task("serve", function() {
   gulp.watch("less/**/*.less", ["style"]);
   gulp.watch("*.html",["copyHtml"]);
   gulp.watch("build/*.html").on("change", server.reload);
+  gulp.watch("js/*.js",["copyMinJs"]);
+  gulp.watch("build/js/*.js").on("change", server.reload);
 });
 
-gulp.task("minJs", function() {
-  gulp.src("js/**.js")
-  .pipe(uglify())
-   .pipe(rename({
-    suffix: ".min",
-  }))
-  .pipe(gulp.dest("build/js"));
-});
 
 gulp.task("build", function(fn) {
   run(

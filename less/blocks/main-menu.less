@@ -36,9 +36,7 @@
     }
 
     .main-menu__list {
-      @media @mobile-tablet-widths-only {
         display: none;
-      }
       @media @desktop-widths {
         display: flex;
         flex-wrap: wrap;
@@ -81,6 +79,7 @@
       background: @blue;
       top: 0;
       left: -10px;
+      z-index: 1;
       @media @tablet-widths {
         width: 768px;
         left: -20px;
@@ -92,6 +91,15 @@
     .main-menu__list {
       position: static;
       width: 300px;
+      display: block;
+      @media @tablet-widths {
+        width: 728px;
+      }
+      @media @desktop-widths {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
     }
 
     .main-menu__toggle {
