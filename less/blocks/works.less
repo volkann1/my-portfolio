@@ -35,9 +35,16 @@
 }
 
 .works__item {
+  animation-name: zoomIn;
+  animation-duration: 2s;
+  animation-fill-mode: both;
   &--techomart {
     @media @desktop-widths {
       order: -1;
     }
   }
+}
+
+.hide {
+  display: none;
 }
